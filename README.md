@@ -15,5 +15,21 @@ Since more consistent results were obtained on the IEMOCAP data set, the studies
 - OpenSMILE was used to extract audio features. You can see the text feature extraction processes in the [OpenSMILE_Feature_Extraction.ipynb](OpenSMILE_Feature_Extraction.ipynb) file.
 - 3D-CNN was used to extract video features. You can see the text feature extraction processes in the [3D_CNN_Feature_Extraction.ipynb](3D_CNN_Feature_Extraction.ipynb) file.
 
+  ## Models
+  
+Since the most successful results among single models were obtained in the text model, and among multiple models, the most successful results were obtained in the text-audio-video model, these studies are shared. You can review the [report](Report.pdf) file to examine results of other models.
+
+### Text Model
+- [IEMOCAP_BERT.ipynb](IEMOCAP_BERT.ipynb) : Text features extracted with BERT were classified with the BERT classifier.
+
+### Text - Audio - Video Model 
+- [IEMOCAP_Text_Audio_Video.ipynb](IEMOCAP_Text_Audio_Video.ipynb) : Text features extracted with BERT, audio features extracted with OpenSMILE and video features extracted with 3D-CNN were concatenated and classified with the XGBoost classifier.
+
+## Macro Average F1-Scores
+
+| Model        | Macro Avg. F1-Score               |
+|------------------|----------------------------|
+| Text Model     | 58% |
+| Text - Audio - Video  Model | 53%|
 
   
